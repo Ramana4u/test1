@@ -6,6 +6,17 @@ pipeline{
                    echo 'My first Job'
                } 
             }
-            
+            Parallel{
+                  stage('stage2'){
+                   steps{
+                   echo 'My first Job in parllel1'
+               } 
+            }
+                    stage('stage3'){
+                     steps{
+                     echo 'My first Job parllel2'
+               } 
+            }
+         }
     }  
 }
