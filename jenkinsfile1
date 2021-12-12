@@ -1,9 +1,15 @@
 pipeline{
     agent any
+        parameters{
+        string(name: 'NAME', defaultValue 'RAMANA',description:'MYNAME')
+        choice(name: 'VERSIONS', choices:[1.1.0,1.1.1,1.1.2], description: 'Versions')
+        booleanParam(name:'ARE YOU DEV TEAM',defaultValue:true, description:'')
+        }
         stages{
             stage('stage1'){
                steps{
                    echo 'My first Job'
+                   echo " Hello choice parameter {$param.choice}"
                } 
             }
             stage('Stage in parallel'){
