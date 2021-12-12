@@ -8,8 +8,9 @@ pipeline{
         stages{
             stage('stage1'){
                steps{
-                   echo 'My first Job'
+                  echo 'My first Job'
                   echo "Hello choice parameter $VERSIONS"
+                  echo "Hello string parameter $NAME"
                 //    println('Hello CHOCIE-Param!! ' + VERSIONS)
                } 
             }
