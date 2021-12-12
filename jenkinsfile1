@@ -9,7 +9,7 @@ pipeline{
             stage('stage1'){
                steps{
                    echo 'My first Job'
-                   echo " Hello choice parameter {$param.choice}"
+                   echo " Hello choice parameter {$Param.choice}"
                } 
             }
             stage('Stage in parallel'){
