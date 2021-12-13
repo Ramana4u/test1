@@ -17,8 +17,8 @@ pipeline{
                   }
                   stage('stage2'){
                    steps{
-                   input('Need empId')
-                   echo 'My first Job in parllel1'
+                        def returnValue = input message: 'Need Emp Id'   
+                         echo 'My first Job in parllel1'
                      } 
                   }
          }
