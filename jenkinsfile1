@@ -18,10 +18,10 @@ pipeline{
                   stage('stage2'){
                    steps{
                      input {
-                         message "Can we Proceed?" 
+                         message"Can we Proceed?" 
                          ok "Yes" 
                          submitter "Digital Varys"
-                         parameters { string(name: 'EMPID', defaultValue: '', description: '')}
+                         parameters{ string(name: 'EMPID', defaultValue: '', description: '')}
                          echo "EMPid ${EMPID}"
                      } 
                   }
