@@ -17,9 +17,12 @@ pipeline{
                   }
                   stage('stage2'){
                    steps{
-                      def returnValue = input message: 'Need some input', parameters: [string(defaultValue: '', description: '', name: 'Empid')]
-                      echo returnValue ['Empid']
-                         echo 'My first Job in parllel1'
+                     input {
+                         message "Can we Proceed?" 
+                         ok "Yes" 
+                         submitter "Digital Varys"
+                         parameters { string(name: 'EMPID', defaultValue: '', description: '')}
+                         echo "EMPid ${EMPID}"
                      } 
                   }
          }
