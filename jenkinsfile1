@@ -3,7 +3,7 @@ pipeline{
         parameters{
         string(name: 'Emailid', defaultValue:'Nexustechno@system.in',description:'OffEmail')
         choice(name: 'EMPOF', choices:['GOOGLE' , 'FACEBOOK' , 'TWITER'], description: '')
-        text(name: 'Ramana' , defaultvalue: '''My name is ramana''' , description: 'AboutMyself')
+        text(name: 'Ramana' , defaultValue: '''My name is ramana''' , description: 'AboutMyself')
         booleanParam(name:'ARE MARRIED',defaultValue:true, description:'')
         }
         stages{
