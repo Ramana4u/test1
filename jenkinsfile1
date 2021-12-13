@@ -16,13 +16,12 @@ pipeline{
                     } 
                   }
                   stage('stage2'){
+                     input {
+                             message "Select a git tag"
+                             parameters {string(name: 'Empid', defaultValue:'',description:'')}
                    steps{
-                   def userInput = input(
-                                  id: 'userInput'
-                                //  message: 'Let\'s promote?'
-                                  parameters: [ string(name: 'Empid', defaultValue:'',description:'')])
-                                echo ("Empid: "+userInput)
-                  }
+                        echo "emp id is: $Empid"
+                   }
          }
        }
 }
