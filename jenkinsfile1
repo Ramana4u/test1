@@ -17,7 +17,7 @@ pipeline{
                   }
                   stage('stage2'){
                      input {
-                             message "Select a git tag"
+                             message "give emp id"
                              parameters {string(name: 'Empid', defaultValue:'',description:'')}
                              }
                    steps{
