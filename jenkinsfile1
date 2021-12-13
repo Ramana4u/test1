@@ -19,6 +19,7 @@ pipeline{
                      input {
                              message "Select a git tag"
                              parameters {string(name: 'Empid', defaultValue:'',description:'')}
+                             }
                    steps{
                         echo "emp id is: $Empid"
                    }
