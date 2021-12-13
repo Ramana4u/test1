@@ -19,7 +19,7 @@ pipeline{
                    steps{
                    def userInput = input(
                                   id: 'userInput'
-                                  message: 'Let\'s promote?'
+                                //  message: 'Let\'s promote?'
                                   parameters: [ string(name: 'Empid', defaultValue:'',description:'')])
                                 echo ("Empid: "+userInput)
                   }
