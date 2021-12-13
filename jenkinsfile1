@@ -17,13 +17,11 @@ pipeline{
                   }
                   stage('stage2'){
                    steps{
-                     input {
-                         message"Can we Proceed?" 
-                         ok "Yes" 
-                         submitter "Digital Varys"
-                         parameters{ string(name: 'EMPID', defaultValue: '', description: '')}
-                         echo "EMPid ${EMPID}"
-                     } 
+                   def userInput = input(
+                                  id: 'userInput'
+                                  message: 'Let\'s promote?'
+                                  parameters: [ string(name: 'Empid', defaultValue:'',description:'')])
+                                echo ("Empid: "+userInput)
                   }
          }
        }
