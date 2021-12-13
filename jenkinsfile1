@@ -1,34 +1,26 @@
 pipeline{
     agent {label 'main'}
         parameters{
-        string(name: 'NAME', defaultValue:'RAMANA',description:'MYNAME')
-        choice(name: 'VERSIONS', choices:['1.1.0' , '1.1.1' , '1.1.2'], description: 'Versions')
-        booleanParam(name:'ARE YOU DEV TEAM',defaultValue:true, description:'')
+        string(name: 'Emailid', defaultValue:'Nexustechno@system.in',description:'OffEmail')
+        choice(name: 'EMPOF', choices:['GOOGLE' , 'FACEBOOK' , 'TWITER'], description: '')
+        text(name: 'Ramana' , defaultvalue: 'My name is ramana' , description: 'AboutMyself')
+        booleanParam(name:'ARE MARRIED',defaultValue:true, description:'')
         }
         stages{
             stage('stage1'){
                steps{
                   echo 'My first Job'
-                  echo "Hello choice parameter $VERSIONS"
-                  echo "Hello string parameter $NAME"
-                //    println('Hello CHOCIE-Param!! ' + VERSIONS)
-               } 
-            }
-            stage('Stage in parallel'){
-            parallel{
+                  echo "You are an Employee of $EMPOF"
+                  echo "Official emialid: $Emailid"
+                  echo "About My self: $Ramana"
+                    } 
+                  }
                   stage('stage2'){
                    steps{
                    sleep(15)
                    echo 'My first Job in parllel1'
-               } 
-            }
-                    stage('stage3'){
-                     steps{
-                     sleep(10)
-                     echo 'My first Job parllel2'
-               } 
-            }
+                     } 
+                  }
          }
        }
-    }  
-}
+
