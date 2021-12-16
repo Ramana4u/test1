@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'main'}
+    agent {label 'slave'}
         parameters{
         string(name: 'Emailid', defaultValue:'Nexustechno@system.in',description:'OffEmail')
         choice(name: 'EMPOF', choices:['GOOGLE' , 'FACEBOOK' , 'TWITER'], description: '')
