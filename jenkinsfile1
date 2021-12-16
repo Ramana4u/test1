@@ -9,7 +9,7 @@ pipeline{
         stages{
             stage('stage1'){
                steps{
-                  echo 'My first Job'
+                  echo 'My first Job using webhook'
                   echo "You are an Employee of $EMPOF"
                   echo "Official emialid: $Emailid"
                   echo "About My self: $Ramana"
