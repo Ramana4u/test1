@@ -1,0 +1,28 @@
+pipeline{
+    agent {label 'slave'}
+        parameters{
+        string(name: 'Emailid', defaultValue:'Nexustechno@system.in',description:'OffEmail')
+        choice(name: 'EMPOF', choices:['GOOGLE' , 'FACEBOOK' , 'TWITER'], description: '')
+        text(name: 'Ramana' , defaultValue: '''My name is ramana im working at nexus''' , description: 'AboutMyself')
+        booleanParam(name:'ARE MARRIED',defaultValue:true, description:'')
+        }
+        stages{
+            stage('stage1'){
+               steps{
+                  echo 'My first Job using webhook'
+                  echo "You are an Employee of $EMPOF"
+                  echo "Official emialid: $Emailid"
+                  echo "About My self: $Ramana"
+                    } 
+                  }
+                  stage('stage2'){
+                     input {
+                             message "give emp id"
+                             parameters {string(name: 'Empid', defaultValue:'',description:'')}
+                             }
+                   steps{
+                        echo "emp id is: $Empid"
+                   }
+         }
+       }
+}
