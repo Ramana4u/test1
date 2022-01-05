@@ -3,9 +3,6 @@ provider "aws"{
 }
 module "A" {
   source = "git::https://github.com/Ramana4u/test1.git?ref=main2"
-  output "TG_ARN"{
-    value = aws_lb_target_group.test.arn
-  }
 }
   module "B" {
     source = "git::https://github.com/Ramana4u/test1.git?ref=main1"
