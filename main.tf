@@ -6,5 +6,6 @@ module "A" {
 }
   module "B" {
     source = "git::https://github.com/Ramana4u/test1.git?ref=main1"
-      target_group_arns = module.A.TG_ARN
+    security_groups = var.security_groups
+      target_group_arns = [module.A.TG_ARN]
  }
