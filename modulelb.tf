@@ -20,6 +20,3 @@ resource "aws_lb_listener" "front_end" {
     target_group_arn = aws_lb_target_group.test.arn
   }
 }
-output "TG_ARN"{
-  value = aws_lb_target_group.test.arn
-}
