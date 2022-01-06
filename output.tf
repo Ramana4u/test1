@@ -1,3 +1,3 @@
-output "TG_ARN" {
-  value = module.A.TG_ARN
+output "target_group_arns" {
+  value = module.A.target_group_arns
     }
