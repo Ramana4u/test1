@@ -50,3 +50,6 @@ variable "target_id" {
   type = string
   default = "i-033e9c4279b6714ba"
 }
+variable "target_group_arns" {
+}
+
