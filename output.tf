@@ -1,3 +1,3 @@
-  output "target_group_arns"{
+  output "TG_ARN"{
     value = aws_lb_target_group.test.arn
   }
