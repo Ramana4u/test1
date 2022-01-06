@@ -4,7 +4,6 @@ provider "aws"{
 module "A" {
   source = "git::https://github.com/Ramana4u/test1.git?ref=main2"
     }
-}
   module "B" {
     source = "git::https://github.com/Ramana4u/test1.git?ref=main1"
     output "TG_ARN" {
